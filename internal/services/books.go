@@ -1,7 +1,7 @@
 package services
 
 import (
-	"Telegram-Store/repositories"
+	"Telegram-Store/storage/repositories"
 	"fmt"
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
 	"log"

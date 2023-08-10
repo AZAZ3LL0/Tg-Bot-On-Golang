@@ -1,8 +1,8 @@
 package database
 
 import (
-	"Telegram-Store/config"
-	"Telegram-Store/models"
+	"Telegram-Store/cmd/config"
+	"Telegram-Store/storage/models"
 	"fmt"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"

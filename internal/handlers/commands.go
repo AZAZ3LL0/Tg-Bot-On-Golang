@@ -1,8 +1,7 @@
 package handlers
 
 import (
-	"Telegram-Store/services"
-
+	"Telegram-Store/internal/services"
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
 )
 

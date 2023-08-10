@@ -1,9 +1,9 @@
 package main
 
 import (
-	"Telegram-Store/clients"
-	"Telegram-Store/config"
-	"Telegram-Store/handlers"
+	"Telegram-Store/cmd/config"
+	"Telegram-Store/internal/clients"
+	"Telegram-Store/internal/handlers"
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
 	"log"

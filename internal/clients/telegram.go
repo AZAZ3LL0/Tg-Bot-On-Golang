@@ -1,7 +1,7 @@
 package clients
 
 import (
-	"Telegram-Store/config"
+	"Telegram-Store/cmd/config"
 	"log"
 
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"

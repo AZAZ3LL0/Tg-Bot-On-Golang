@@ -3,8 +3,8 @@
 package handlers
 
 import (
-	"Telegram-Store/services"
-	"Telegram-Store/utils"
+	"Telegram-Store/internal/services"
+	"Telegram-Store/internal/utils"
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
 	"strconv"
 )

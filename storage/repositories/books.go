@@ -3,8 +3,8 @@
 package repositories
 
 import (
-	"Telegram-Store/errors"
-	"Telegram-Store/models"
+	"Telegram-Store/internal/errors"
+	"Telegram-Store/storage/models"
 )
 
 func GetAllBooks() ([]models.Book, error) {

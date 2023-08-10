@@ -1,7 +1,7 @@
 package repositories
 
 import (
-	"Telegram-Store/database"
+	"Telegram-Store/storage/database"
 
 	"gorm.io/gorm"
 )
