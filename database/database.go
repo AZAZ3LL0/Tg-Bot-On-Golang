@@ -4,8 +4,6 @@ import (
 	"Telegram-Store/config"
 	"Telegram-Store/models"
 	"fmt"
-	"log"
-
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
@@ -22,11 +20,13 @@ func Init() *gorm.DB {
 
 	DB, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
-		log.Fatal(err)
+		fmt.Println(err)
+		return nil
 	}
 
-	if err := DB.AutoMigrate(&models.Book{}); err != nil {
-		log.Fatal(err)
+	if err = DB.AutoMigrate(&models.Book{}); err != nil {
+		fmt.Println(err)
+		return nil
 	}
 
 	return DB

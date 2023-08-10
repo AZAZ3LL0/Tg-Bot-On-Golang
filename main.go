@@ -19,5 +19,12 @@ func main() {
 	bot := clients.Init()
 	handlers.Init(bot)
 
-	log.Fatal(app.Listen(":" + config.Config("PORT")))
+	port, err := config.Config("PORT")
+
+	if err != nil {
+		log.Println(err)
+		return
+	}
+
+	log.Print(app.Listen(":" + port))
 }

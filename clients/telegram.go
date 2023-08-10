@@ -8,10 +8,21 @@ import (
 )
 
 func Init() *tgbotapi.BotAPI {
-	bot, err := tgbotapi.NewBotAPI(config.Config("TELEGRAM_APITOKEN"))
+
+	apiToke, err := config.Config("TELEGRAM_APITOKEN")
+
 	if err != nil {
-		log.Panic(err)
+		log.Println(err)
+		return nil
 	}
+
+	bot, err := tgbotapi.NewBotAPI(apiToke)
+	if err != nil {
+		log.Println(err)
+		return nil
+	}
+
 	bot.Debug = true
+
 	return bot
 }
