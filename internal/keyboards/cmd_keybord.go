@@ -6,13 +6,8 @@ import (
 
 func CmdKeyboard() tgbotapi.ReplyKeyboardMarkup {
 	var cmdKeyboard = tgbotapi.NewReplyKeyboard(
-		tgbotapi.NewKeyboardButtonRow(
-			tgbotapi.NewKeyboardButton("/list_books"),
-		),
-		tgbotapi.NewKeyboardButtonRow(
-			tgbotapi.NewKeyboardButton("/borrow_book"),
-			tgbotapi.NewKeyboardButton("/return_book"),
-		),
-	)
+		tgbotapi.NewKeyboardButtonRow(tgbotapi.NewKeyboardButton("/take"),
+			tgbotapi.NewKeyboardButton("/return")),
+		tgbotapi.NewKeyboardButtonRow(tgbotapi.NewKeyboardButtonContact("ОТПРАВЛЕНИЕ НОМЕРА ТЕЛЕФОНА")))
 	return cmdKeyboard
 }
